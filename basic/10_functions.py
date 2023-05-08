@@ -44,7 +44,7 @@ def print_texts(text):
 print_texts("Hola")
 
 # En caso de que se pasen múltiples textos 
-# pero solo se esté declarando un en la entrada de la
+# pero solo se esté declarando uno en la entrada de la
 # función, entonces podemos agregar * 
 # esto se interpreta como que de ese tipo de dato se
 # pueden pasar todos los que desee sin necesidad de 
