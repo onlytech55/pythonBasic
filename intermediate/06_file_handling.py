@@ -70,4 +70,41 @@ json_file.close()
 with open(ruta_json) as my_json_file:
     for line in my_json_file.readlines():
         print(line)
-    
+
+json_dict = json.load(open(ruta_json))
+
+print(json_dict)
+print(type(json_dict))
+
+# Dado que es un diccionario, obtener un campo en específico
+print(json_dict["name"])
+
+
+# .csv file
+import csv 
+
+csv_file = open("intermediate/my_file.csv", "w+")
+
+csv_writer = csv.writer(csv_file, delimiter=",")
+cabecera = ["name", "surname", "age", "language"]
+csv_writer.writerow(cabecera)
+data = ["Virginia", "Porras", 44, "Python"]
+csv_writer.writerow(data)
+
+csv_file.close()
+
+
+# para leerlo
+ruta_csv = "intermediate/my_file.csv"
+with open(ruta_csv) as my_csv_file:
+    for line in my_csv_file.readlines():
+        print(line)
+
+
+
+
+#.xlsx file
+# import xlrd  # Debe instalarse el módulo
+
+# .xml file
+import xml
