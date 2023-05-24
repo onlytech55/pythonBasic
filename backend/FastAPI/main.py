@@ -27,9 +27,18 @@ async def url():
 #  Ahora vamos a incluir los routers
 # primero, importamos los router creados
 # Routers
-from routers import products, users
+from routers import products, users, jwt_auth_users, basic_auth_users
 
 # router en products.router hacer referencia a la línea 5 del archivo routers/products ---> router = APIRouter()
 # una vez creadas ambas routers, solo se inicia el servidor con uvicorn main:app --reload
 app.include_router(products.router)
 app.include_router(users.router)
+
+app.include_router(jwt_auth_users.router)
+app.include_router(basic_auth_users.router)
+
+
+
+# para poder acceder a recursos estáticos
+from fastapi.staticfiles import StaticFiles
+app.mount("/static", StaticFiles(directory="static"), name="static")
