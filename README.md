@@ -19,3 +19,6 @@ PS C:\python\backend\FastAPI> space --help
 y que muestre la lista de comandos (como comprobación de que se instaló correctamente)
 
 El archivo requirements.txt lleva todas las dependencias, librerías, etc que deben instalarse en deta para que funcione nuestra API...
+
+Para que podamos acceder desde VSCode y hacer pruebas en la API publica en deta, debemos agregar en el archivo Spacefile     
+public: true
