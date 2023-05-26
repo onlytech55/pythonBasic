@@ -14,7 +14,7 @@ from pymongo import MongoClient
 
 # Base de datos remota
 # from pymongo.mongo_client import MongoClient
-uri = "mongodb+srv://mari78viri78:6uDkOFtzyztGLOx0@cluster0.clzkhrz.mongodb.net/"
+uri = "mongodb+srv://mari78viri78:6uDkOFtzyztGLOx0@cluster0.clzkhrz.mongodb.net/?retryWrites=true&w=majority"
 # Create a new client and connect to the server
 db_client = MongoClient(uri).test
 # Send a ping to confirm a successful connection
